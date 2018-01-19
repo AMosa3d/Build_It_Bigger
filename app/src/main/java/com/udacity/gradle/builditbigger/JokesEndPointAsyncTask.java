@@ -59,7 +59,6 @@ public class JokesEndPointAsyncTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String s) {
-        //Toast.makeText(context,s,Toast.LENGTH_LONG).show();
         jokesInterface = (JokesInterface) context;
         result = "";
         jokesInterface.sendJoke(s);

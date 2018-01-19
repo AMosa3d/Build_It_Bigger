@@ -22,9 +22,6 @@ android {
     productFlavors{
         free{
             applicationId "com.udacity.gradle.builditbigger.free"
-            dependencies {
-                compile 'com.google.android.gms:play-services-ads:9.8.0'
-            }
         }
         paid{
             applicationId "com.udacity.gradle.builditbigger.paid"
@@ -50,7 +47,5 @@ dependencies {
     compile project(':jokeandroidlibrary')
     compile project(path: ':backend', configuration: 'android-endpoints')
 
-
-    testCompile "org.robolectric:robolectric:3.6.1"
-
+    freeCompile 'com.google.android.gms:play-services-ads:9.8.0'
 }

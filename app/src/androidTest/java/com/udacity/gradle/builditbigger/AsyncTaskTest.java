@@ -25,6 +25,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withParent;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.notNullValue;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -69,6 +70,8 @@ public class AsyncTaskTest {
                                 0),
                         isDisplayed()));
         textView.check(matches(not(withText("Error"))));
+        textView.check(matches(not(withText(""))));
+        textView.check(matches(notNullValue()));
 
     }
 
